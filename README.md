@@ -1,5 +1,4 @@
 # contact-form
-================
 
 PHPによるお問い合わせフォームです。  
 フロントエンドにBootstrap、Font Awesomeを使用しています。  
