@@ -1,11 +1,5 @@
 <?php
-/**
- * KobeBeauty PHP Contact Form
- * http://www.kobe-beauty.co.jp/
- *
- * Copyright (c) 2014 Kobe Beauty Co., Ltd.
- * Released under the MIT license
- */
+
 global $param;
 ?>
 
