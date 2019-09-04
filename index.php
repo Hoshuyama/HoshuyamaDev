@@ -1,11 +1,4 @@
 <?php
-/**
- * KobeBeauty PHP Contact Form
- * http://www.kobe-beauty.co.jp/
- *
- * Copyright (c) 2014 Kobe Beauty Co., Ltd.
- * Released under the MIT license
- */
 // ファイル読み込み
 require_once( __DIR__ . '/pcf_lib/init.php');
 require_once( __DIR__ . '/pcf_lib/validate.php');
