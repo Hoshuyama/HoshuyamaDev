@@ -1,11 +1,4 @@
 <?php
-/**
- * KobeBeauty PHP Contact Form
- * http://www.kobe-beauty.co.jp/
- *
- * Copyright (c) 2014 Kobe Beauty Co., Ltd.
- * Released under the MIT license
- */
 function checkInputData($inputData) {
 	// エラーメッセージを格納する配列
 	$err_msg = array();
