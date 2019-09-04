@@ -1,20 +1,11 @@
 <?php
-/**
- * KobeBeauty PHP Contact Form
- * http://www.kobe-beauty.co.jp/
- *
- * Copyright (c) 2014 Kobe Beauty Co., Ltd.
- * Released under the MIT license
- */
 // セッションスタート
 session_start();
-// *** 「myphp/github-php-contact-form/contact/」を環境に合わせて必ず変更してください！！！
 // http://(またはhttps://)からホストまでを取得
 $site_url = (empty($_SERVER['HTTPS']) ? 'http://' : 'https://') . $_SERVER['HTTP_HOST'] . '/';
-define('HOME_URL', $site_url . 'myphp/github-php-contact-form/contact/');
-// *** 「your_address@example.com」を必ず変更してください！！！
+define('HOME_URL', $site_url . 'myphp/github-Hoshuyama-contact-form/');
 // 自動返信メールの管理者メールアドレス
-define('ADMIN_MAIL', 'your_address@example.com');
+define('ADMIN_MAIL', '');
 // HTMlエスケープ
 function h($str) {
 	return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
