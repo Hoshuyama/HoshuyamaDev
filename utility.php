@@ -20,14 +20,10 @@ function getFooter () {
 */
 function sendMailtoAdmin ($data) {
 	$result = false;
-	// 文字コードをセット
 	mb_language("Japanese");
 	mb_internal_encoding("UTF-8");
-	// 送信先
 	$to = ADMIN_MAIL;
-	// 件名
 	$subject = "ホームページから問い合わせがありました";
-	// 本文作成
 	$body  = "";
 	$body .= "---------------------------------------------------------------------\n";
 	$body .= "　ホームページから問い合わせがありました\n";
@@ -43,7 +39,6 @@ function sendMailtoAdmin ($data) {
 	$body .= "\n";
 	$body .= "---------------------------------------------------------------------\n";
 	$body .= "　このメールは問い合わせフォームから送信されました。\n";
-	// 送信処理
 	if (mb_send_mail($to, $subject, $body)) {
 		$result = true; // 送信成功
 	}
@@ -56,16 +51,11 @@ function sendMailtoAdmin ($data) {
 */
 function sendMailtoCustomer ($data) {
 	$result = false;
-	// 文字コードをセット
 	mb_language("Japanese");
 	mb_internal_encoding("UTF-8");
-	// 送信先
 	$to = $data["email"];
-	// 件名
 	$subject = "お問い合わせを受け付けました";
-	// 送信元
 	$from = ADMIN_MAIL;
-	// 本文作成
 	$body  = "";
 	$body .= $data["name"] . "　様\n";
 	$body .= "\n";
@@ -89,7 +79,7 @@ function sendMailtoCustomer ($data) {
 	$body .= "---------------------------------------------------------------------\n";
 	$body .= "このメールはホームページからお問い合わせの受付けにより自動送信されております。\n";
 	$body .= "お心当たりのない方は、恐れ入りますがその旨ご連絡いただけると幸いです。";
-	// 送信処理
+	
 	if (mb_send_mail($to, $subject, $body, "From: ".$from, "-f".$from)) {
 		$result = true; // 送信成功
 	}
